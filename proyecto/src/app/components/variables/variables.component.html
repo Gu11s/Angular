@@ -1,0 +1,35 @@
+<table class = "table table-inverse">
+
+  <tr>
+    <td>Variable String</td>
+    <td> {{ nombre }} </td>
+  </tr>
+
+  <tr>
+    <td>Nombre</td>
+    <td> {{ nombre | uppercase}} </td>
+  </tr>
+
+  <tr>
+    <td>Numeros</td>
+    <td> {{ nota + 100 }} </td>
+  </tr>
+
+</table>
+
+<button
+type="button"
+class="btn btn-primary"
+(click)="cambiarNombre()"
+[disabled]="nombre.length == 0">
+  Cambiar nombre
+</button>
+
+<br><br>
+
+<input  type="text"
+        class="form-control"
+        placeholder="Escriba un nombre"
+        [(ngModel)]="nombre">
+<!-- ng-model="name"> -->
+<pre>{{nombre}}</pre>
